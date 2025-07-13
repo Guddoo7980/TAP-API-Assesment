@@ -10,13 +10,7 @@
 
 ---
 
-## 📸 Screenshots
 
-> Add images in a folder `assets/screenshots/`
-
-| Dashboard View | Cards & Address |
-|----------------|-----------------|
-| ![screenshot1](./assests/Screenshot (1)) | [screenshot1](./assests/Screenshot (2)) | [screenshot1](./assests/Screenshot (3))  | [screenshot1](./assests/Screenshot (4))
 
 ---
 
