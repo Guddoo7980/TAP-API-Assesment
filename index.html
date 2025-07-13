@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NearWise+ – Smart Nearby Helper</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icons/location.png" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="logo-section">
+      <img src="./assests/icons/reshot-icon-hops-hand-Q3B5XHGVRL.svg" alt="NearWise+ Logo" />
+      <h1>Near-Wise + <span>Smart Nearby Finder</span></h1>
+    </div>
+    <div id="network-status"></div>
+  </header>
+
+  <!-- ========== OFFLINE CANVAS ========== -->
+  <canvas id="offlineCanvas" width="400" height="60" aria-label="Offline Banner"></canvas>
+
+  <!-- ========== LOCATION SECTION ========== -->
+  <section id="location-section" class="section">
+    <h2>Your Current Location</h2>
+    <p id="coordinates">Fetching coordinates...</p>
+    <p id="address">Detecting address...</p>
+    <button id="refresh-location" class="btn-primary">🔄 Refresh Location</button>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section id="services" class="section">
+    <h2>Nearby Services That Solve Real-World Problems</h2>
+    <p class="section-desc">
+      Accessing essential services during emergencies or daily routines is often a challenge. NearWise+ bridges this gap by giving you instant access to life-saving and convenience-based services, right from your location.
+    </p>
+
+    <div class="card-container">
+      <!-- ROW 1 -->
+      <div class="card observer">
+        <img src="./assests/icons/hospital.svg" alt="Hospital" />
+        <h3>Nearby Hospitals</h3>
+        <p>Access emergency and outpatient medical facilities instantly based on your real-time location.</p>
+        <button onclick="openService('hospital')">Open Maps</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/police.svg.svg" alt="Police Station" />
+        <h3>Police Assistance</h3>
+        <p>Quickly locate the nearest police station in unsafe or emergency scenarios.</p>
+        <button onclick="openService('police')">Track Nearby</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/petrol pump.svg" alt="Fuel Station" />
+        <h3>Petrol & EV Stations</h3>
+        <p>Running low on fuel or charge? Find the closest fuel or EV charging station.</p>
+        <button onclick="openService('petrol')">Find Now</button>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="card observer">
+        <img src="./assests/icons/atm.svg.svg" alt="ATM" />
+        <h3>Nearby ATMs</h3>
+        <p>Withdraw money anytime, even while traveling, using smart local ATM detection.</p>
+        <button onclick="openService('atm')">Locate</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/mechanic.svg" alt="Mechanic" />
+        <h3>Vehicle Breakdown Help</h3>
+        <p>Stuck on the road? Connect with reliable auto mechanics around your area.</p>
+        <button onclick="openService('mechanic')">Get Help</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/repair pic.svg" alt="Repair Shops" />
+        <h3>Device Repair Shops</h3>
+        <p>Locate trustworthy mobile, electronics, and laptop repair centers near you.</p>
+        <button onclick="openService('repair')">Explore</button>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="card observer">
+        <img src="./assests/icons/public wifi.svg" alt="Public WiFi" />
+        <h3>Public Wi-Fi Zones</h3>
+        <p>Find open hotspots or secure public Wi-Fi if you're low on mobile data.</p>
+        <button onclick="openService('wifi')">Scan Now</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/pharmacy.svg.svg" alt="Pharmacy" />
+        <h3>24x7 Pharmacies</h3>
+        <p>Get directions to the nearest medical store, even late at night or during curfew.</p>
+        <button onclick="openService('pharmacy')">Locate Pharmacy</button>
+      </div>
+
+      <div class="card observer">
+        <img src="./assests/icons/shelter.svg.svg" alt="Emergency Shelter" />
+        <h3>Emergency Shelters</h3>
+        <p>In crisis situations (floods, storms), find the closest relief or shelter zones.</p>
+        <button onclick="openService('shelter')">Find Safety</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NETWORK INFO SECTION ========== -->
+  <section id="network-info" class="section">
+    <h2>Your Network Information</h2>
+    <p id="connectionType">Checking your connection type...</p>
+    <p id="downlinkSpeed">Evaluating bandwidth...</p>
+  </section>
+
+  <!-- ========== EDUCATIONAL SECTION ========== -->
+  <section class="section">
+    <h2>Why This Project Matters?</h2>
+    <ul class="help-list">
+      <li>✅ Helps users during emergencies without downloading any app</li>
+      <li>✅ Works even in poor networks with auto-reconnect and location caching</li>
+      <li>✅ Supports elderly and differently abled by offering instant discovery</li>
+      <li>✅ Prevents unnecessary panic by showing verified nearby options</li>
+    </ul>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>© 2025 NearWise+ | Built using Web APIs: Geolocation, Intersection Observer, Canvas, Network Info, and Background Tasks API</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

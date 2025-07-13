@@ -1,0 +1,262 @@
+/* ========== Global Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== Header ========== */
+header {
+  background-color: #00416a;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-section img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-section h1 {
+  font-size: 1.6rem;
+}
+
+.logo-section span {
+  font-weight: 300;
+  font-size: 1rem;
+  display: block;
+}
+
+/* ========== Canvas Banner ========== */
+#offlineCanvas {
+  background-color: #ffdede;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Section ========== */
+.section {
+  padding: 2rem 3%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  text-align: center;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #555;
+}
+
+.help-list {
+  list-style: none;
+  padding: 1rem;
+}
+
+.help-list li {
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  color: #1b2733;
+}
+
+/* ========== Location Section ========== */
+#location-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+#refresh-location {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: #0084ff;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#refresh-location:hover {
+  background-color: #005fbb;
+}
+
+/* ========== Card Container ========== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #0072e3;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #004f9f;
+}
+
+/* ========== Observer Animations ========== */
+.observer {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.observer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Network Info ========== */
+#network-info p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #00416a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-section {
+    flex-direction: column;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  #refresh-location {
+    width: 90%;
+  }
+}
+
+/* ========== Utility Classes ========== */
+.btn-primary {
+  background-color: #005bbb;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #003e80;
+}
