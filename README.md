@@ -43,3 +43,12 @@
 
 ## 🧩 Project Structure
 
+NearWise-Smart-Nearby-Helper/
+├── index.html # Main HTML page with inline JS
+├── styles/
+│ └── style.css # All responsive styling
+├── assets/
+│ ├── icons/ # Service icons (png/svg)
+│ └── screenshots/ # App screenshots (optional)
+└── README.md # Project overview and usage
+
